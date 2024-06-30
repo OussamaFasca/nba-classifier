@@ -5,7 +5,9 @@ COPY . /app/
 
 RUN pip3 install -r requirements.txt
 
-# Runing unit tests
+EXPOSE 5000
+
+# model building
 RUN python3 test.py
 
 CMD ["python3","api.py"]
